@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Оформлення замовлення</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <h1>Магазин мобільних телефонів</h1>
+            <nav>
+                <ul>
+                    <li><a href="home.html">Головна</a></li>
+                    <li><a href="product.html">Товари</a></li>
+                    <li><a href="cart.html">Кошик</a></li>
+                    <li><a href="checkout.html">Оформлення</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <h2>Оформлення замовлення</h2>
+        <form id="order-form" action="place_order.php" method="POST">
+            <h3>Ваші дані</h3>
+            <label for="name">Ім'я:</label>
+            <input type="text" id="name" name="name" required>
+            
+            <label for="email">Електронна пошта:</label>
+            <input type="email" id="email" name="email" required>
+            
+            <label for="phone">Телефон:</label>
+            <input type="tel" id="phone" name="phone" required>
+            
+            <label for="address">Адреса доставки:</label>
+            <textarea id="address" name="address" rows="4" required></textarea>
+            
+            <h3>Ваше замовлення</h3>
+            <div id="order-items" class="order-items"></div>
+            
+            <button type="submit">Оформити замовлення</button>
+        </form>
+    </main>
+    <footer>
+        <p>&copy; 2024 Магазин мобільних телефонів. Всі права захищені.</p>
+    </footer>
+    <script src="checkout.js"></script>
+</body>
+</html>
